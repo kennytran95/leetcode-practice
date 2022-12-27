@@ -1,0 +1,14 @@
+Memoization
+
+- Make the brute force solution
+
+  - Visualize the problem as a tree
+  - Implement the tree using recursion
+  - Test it (should be able to give a solution with valid results)
+
+- Make it Efficient
+
+  - Add a memo object as a default parameter
+    - Using a default parameter will allow us to create a new object upon function call and use the same memo throughout recursion
+  - Add a base case to return memo values
+  - Store return values into the memo

@@ -13,3 +13,30 @@ console.log(
   gridTraveler(2, 3),
   gridTraveler(18, 18)
 );
+
+/* Tablulation */
+
+function T_gridTraveler(x, y) {
+  const table = Array(x + 1);
+  for (let i = 0; i < table.length; i++) {
+    table[i] = Array(y + 1).fill(0);
+  }
+
+  table[1][1] = 1;
+
+  for (let r = 0; r <= x; r++) {
+    for (let c = 0; c <= y; c++) {
+      if (c + 1 <= y) table[r][c + 1] += table[r][c];
+      if (r + 1 <= x) table[r + 1][c] += table[r][c];
+    }
+  }
+
+  return table[x][y];
+}
+
+console.log(
+  T_gridTraveler(3, 3),
+  T_gridTraveler(1, 1),
+  T_gridTraveler(2, 3),
+  T_gridTraveler(18, 18)
+);

@@ -1,0 +1,8 @@
+Tabulation
+
+- Visualize the problem as a table
+- Size the table based on the inputs
+- Initialize the table with default values that correspond to the output
+- Seed the trivial answer into the table. (like a base case)
+- Iterate throught the table
+- Fill further positions based on the current position
